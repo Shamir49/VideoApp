@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <title>Video Chat</title>
+</head>
+<body>
+ <div id="container">
+    <video id="user-1" autoplay playsinline muted></video>
+    <video id="user-2" autoplay playsinline></video>
+
+    <div id="controls">
+        <div class="control-containers" id="camera-btn"><img src="{% static 'icons/video.svg' %}"></div>
+        <div class="control-containers" id="audio-btn"><img src="{% static 'icons/mic.svg' %}"></div>
+        <a href="{% url 'call_ended' %}">
+            <div class="control-containers" id="leave-btn"><img src="{% static 'icons/phone.svg' %}"></div>
+        </a>
+        
+    </div>
+ </div>
+
+<p id="roomid">{{roomName}}</p>
+</body>
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
+</html> 

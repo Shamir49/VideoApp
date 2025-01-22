@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+   
+}
+#container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#user-1{
+    bottom: 5%;
+    right: 5%;
+    position: absolute;
+    border-radius: 4px;
+    height: 30%;
+    margin: 10px 0 20px  0;
+    border: 2px solid black;
+    
+    /* background-color: black; */
+}
+#user-2{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+#controls{
+
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+}
+.control-containers{
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: rgb(179,102,249,0.9);
+   
+}
+.control-containers img{
+    height: 60px;
+    width: 60px;
+}
+#roomid{
+    color: black;
+    display: none;
+}
+@media screen and (max-width:800px){
+    #controls{
+        bottom: 50px;
+        width: 300px;
+    }
+    .control-containers{
+        height: 50px;
+        width: 50px;
+    }
+    .control-containers img{
+        height: 35px;
+        width: 35px;
+    }
+ 
+}
